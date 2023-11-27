@@ -1,16 +1,27 @@
 const mongoose = require('mongoose');
 
 const UserSchema = new mongoose.Schema({
+    nis: {
+        type: String,
+        required: [true, 'Silahkan isikan nis'],
+    },
     nama: {
         type: String,
         required: [true, 'Silahkan isikan nama anda'],
-        unique: true,
+    },
+    umur: {
+        type: String,
+        required: [true, 'Silahkan isikan umur anda'],
     },
     email: {
         type: String,
         required: true,
         unique: true,
-        match: [/\S+@\S+\.\S+/, 'Silahkan isi alamat email anda'],
+    },
+    phone: {
+        type: String,
+        required: true,
+        unique: true,
     }
 });
 

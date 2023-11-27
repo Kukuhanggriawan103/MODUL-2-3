@@ -7,13 +7,13 @@ const usercontroller = require('../router/controllers/user')
 
 
 
-  router.get('/users', usercontroller.index)
+  router.get('/datasiswa', usercontroller.index)
 
-  router.get('/user/:id', usercontroller.show)
+  router.get('/siswa/:id', usercontroller.show)
 
-    router.post('/user', usercontroller.store)
+  router.post('/tambahsiswa', usercontroller.store)
     
-    router.put('/user/:id', usercontroller.update)
+  router.put('/editsiswa/:id', usercontroller.update)
   
-    router.delete('/user/:id', usercontroller.delete)
-    module.exports = router
+  router.delete('/hapussiswa/:id', usercontroller.delete)
+  module.exports = router
